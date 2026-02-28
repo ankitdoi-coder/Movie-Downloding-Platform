@@ -1,6 +1,19 @@
 # 🎬 Ajay Movies Platform  
 **A Production-Ready Full-Stack Movie Catalog & Download System**
 
+> ### 🚀 **ARCHITECTURAL EVOLUTION & LIVE STATUS**
+>
+> **This project has evolved.** To adhere to enterprise separation-of-concerns principles, active development has migrated to decoupled repositories.
+>
+> **👇 CHECK OUT THE LATEST CODEBASES:**
+> - **Frontend (Angular 17+):** [github.com/ankitdoi-coder/Ajay_Movies_Frontend](https://github.com/ankitdoi-coder/Ajay_Movies_Frontend.git)
+> - **Backend (Spring Boot 3):** [github.com/ankitdoi-coder/Ajay_Movies_Backend](https://github.com/ankitdoi-coder/Ajay_Movies_Backend.git)
+>
+> **🌐 LIVE PREVIEW:**
+> - **App:** [https://ajay-movies-frontend.onrender.com](https://ajay-movies-frontend.onrender.com) *(Live Testing Build)*
+> - **API:** [https://ajay-movies-backend.onrender.com](https://ajay-movies-backend.onrender.com)
+>   *(Note: Deployed on serverless infrastructure. Please allow ~50s for cold start/wake-up. 24/7 availability upgrade in progress.)*
+
 Ajay Movies is a **professional-grade full-stack web application** built to manage, showcase, and distribute digital media content in a clean, scalable, and business-ready way.  
 It combines a **Netflix-style user experience** with a **powerful admin system** capable of handling complex data relationships and secure file uploads.
 
@@ -36,13 +49,10 @@ A business owner can upload a movie once, attach posters, screenshots, multiple 
 
 ## 2️⃣ Live Demo
 
-> 🚧 This project is currently under active development and runs locally.
+>  **Live Environment Active**
 
-**Frontend:**  
-http://localhost:4200
-
-**Backend API:**  
-http://localhost:8080/api
+**Frontend:** [https://ajay-movies-frontend.onrender.com](https://ajay-movies-frontend.onrender.com)  
+**Backend API:** [https://ajay-movies-backend.onrender.com](https://ajay-movies-backend.onrender.com)
 
 ### What Users Can Do
 - Browse movies in a responsive poster grid  
@@ -227,7 +237,7 @@ mvn spring-boot:run
 
 ## 🔟 About the Developer (Conversion Section)
 
-Hi, I'm **Ankit Kumar Gurjar**, a Full-Stack Java Developer specializing in building business-ready web applications, not just demos.
+Hi, I'm **Ankit Kumar Gurjar**, a **Software Engineer** who builds **scalable, production-grade systems**. I don't just write code; I engineer solutions that solve business problems.
 
 ### What I Bring
 - Clean backend architecture (Spring Boot)
@@ -247,7 +257,7 @@ Hi, I'm **Ankit Kumar Gurjar**, a Full-Stack Java Developer specializing in buil
 
 **GitHub:** https://github.com/ankitdoi-coder
 
-**LinkedIn:** https://linkedin.com/in/ankit--gurjar
+**LinkedIn:** [Ankit Kumar Gurjar](https://linkedin.com/in/ankit--gurjar)
 
 **Email:** ankitdoi82@gmail.com
 
@@ -264,4 +274,3 @@ This project reflects my ability to deliver production-ready systems that balanc
 
 If you're a recruiter or client looking for someone who can handle both backend complexity and frontend experience —  
 **Let's build something powerful together.**
-"# Ajay_Movies_Fronend" 

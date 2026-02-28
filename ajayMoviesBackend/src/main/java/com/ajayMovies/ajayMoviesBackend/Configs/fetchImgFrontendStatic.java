@@ -11,13 +11,7 @@ public class fetchImgFrontendStatic implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/movies/**")
-                .addResourceLocations("file:D:/SDE-Projects/Spring Boot + Angular/02 - Ajay Movies/uploads/movies/");
-        
-        registry.addResourceHandler("/movies/posters/**")
-                .addResourceLocations("file:D:/SDE-Projects/Spring Boot + Angular/02 - Ajay Movies/uploads/movies/posters/");
-                
-        registry.addResourceHandler("/movies/screenshots/**")
-                .addResourceLocations("file:D:/SDE-Projects/Spring Boot + Angular/02 - Ajay Movies/uploads/movies/screenshots/");
+                .addResourceLocations("file:D:/SDE-Projects/Spring Boot + Angular/02 - Ajay Movies/ajayMoviesBackend/uploads/movies/");
     }
 
     @Override

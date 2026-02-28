@@ -3,6 +3,8 @@ package com.ajayMovies.ajayMoviesBackend.JWT;
 import java.io.IOException;
 import java.util.Collections;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,8 +19,18 @@ import jakarta.servlet.http.HttpServletResponse;
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
+    private static final Logger logger = LoggerFactory.getLogger(JwtAuthenticationFilter.class);
+
     @Autowired
     private JwtUtil jwtUtil;
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+        String path = request.getRequestURI();
+        boolean skip = path.startsWith("/movies/") || path.startsWith("/uploads/");
+        logger.info("Path: {}, Skip filter: {}", path, skip);
+        return skip;
+    }
 
     @Override
     protected void doFilterInternal(
@@ -26,49 +38,27 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             HttpServletResponse response,
             FilterChain filterChain) throws ServletException, IOException {
 
-        //extract the header from thr req.
         String authHeader = request.getHeader("Authorization");
 
-        // 1️⃣ Check if token exists in header
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
-
-            //if header exists extract the token From the header(remove Bearer and only token)
             String token = authHeader.substring(7);
 
             try {
-                // 2️⃣ Extract email from token
                 String email = jwtUtil.extractEmail(token);
 
-                // 3️⃣ Validate token before setting authentication
-                if (email != null && SecurityContextHolder.getContext().getAuthentication() == null 
-                    && jwtUtil.validateToken(token, email)) {
-
-                    UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
-                            email,
-                            null,
-                            Collections.emptyList());//roles and Authorities
-                     
-
-                    //this tells spring this user is authenticated        
-                    SecurityContextHolder.getContext().setAuthentication(authentication);
+                if (email != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+                    if (jwtUtil.validateToken(token, email)) {
+                        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+                                email, null, Collections.emptyList());
+                        SecurityContextHolder.getContext().setAuthentication(authentication);
+                        logger.info("Authentication set for: {}", email);
+                    }
                 }
-
             } catch (Exception e) {
-                // Invalid token → ignore and continue
+                logger.error("Token validation failed: {}", e.getMessage());
             }
         }
 
-        // 4️⃣ Continue filter chain
         filterChain.doFilter(request, response);
     }
 }
-
-// What is SecurityContextHolder?
-
-// It is Spring Security’s memory
-
-// Stores info about the currently logged-in user
-
-// Exists per request
-
-// UsernamePasswordAuthenticationToken =official authentication object 

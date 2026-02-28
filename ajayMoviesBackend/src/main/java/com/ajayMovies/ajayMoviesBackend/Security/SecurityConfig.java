@@ -22,8 +22,9 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/auth/**", "/api/get-all-movies", "/api/get-by-id/**", "/api/save-movie", "/uploads/**", "/movies/**").permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers("/api/auth/**", "/api/get-all-movies", "/api/get-by-id/**", "/uploads/**", "/movies/**").permitAll()
+                .requestMatchers("/api/save-movie").authenticated()
+                .anyRequest().permitAll()
             )
             .sessionManagement(sess ->
                 sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
