@@ -135,32 +135,39 @@ User Interface (Angular) → REST API (Spring Boot) → Database (MySQL) → Fil
 > 📷 **Preview Screenshots:** Check the `/preview` folder in the repository for detailed UI screenshots
 
 ### 🏠 Home Page
-![Home Page](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/uploadMovie.png)
+![Home Page](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/Screenshot 2026-02-28 161736.png)
 - Dark gradient theme for premium look  
 - Hover effects signal interactivity  
 - Fast visual scanning using poster cards
 - Responsive grid layout with smooth animations
 
 ### 📥 Movie Detail Page
-![Movie Detail Page](Preview/Prev2.png)
+![Movie Detail Page](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/downloadPage.png)
 - Highlights quality, language, and size  
 - Dynamic screenshot gallery builds user trust  
 - Clear download actions with multiple quality options
 - Social sharing integration
 
 ### 🔐 Admin Login Page
-![Admin Login Page](preview/admin-login-page.png)
+![Admin Login Page](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/adminLogin.png)
 - **Cinematic Design:** Movie-themed background with overlay effects
 - **Animated Branding:** Sequential text animations with gradient effects
 - **Modern Form Design:** Floating labels and glassmorphism styling
 - **Responsive Layout:** Optimized for all screen sizes
 
 ### 🛠️ Admin Dashboard
-![Admin Dashboard](preview/admin-dashboard.png)
+![Admin Dashboard](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/admindashbord.png)
 - **File Upload System:** Drag-and-drop poster and screenshot management
 - **Real-time Validation:** Instant feedback for form inputs
 - **Content Management:** Streamlined workflow for movie catalog updates  
 
+### 🛠️ Search Functionality
+![Search Movie](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/Search.png)
+- search the movie as per keyword.
+
+### 🛠️ Category Search Functionality
+![Category Search Movie](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/categorysearch.png)
+- Filter the movie as per Category.
 ---
 
 ## 7️⃣ Setup & Installation
