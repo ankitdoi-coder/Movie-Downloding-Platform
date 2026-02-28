@@ -135,7 +135,7 @@ User Interface (Angular) → REST API (Spring Boot) → Database (MySQL) → Fil
 > 📷 **Preview Screenshots:** Check the `/preview` folder in the repository for detailed UI screenshots
 
 ### 🏠 Home Page
-![Home Page](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/Screenshot 2026-02-28 161736.png)
+![Home Page](https://raw.githubusercontent.com/ankitdoi-coder/Movie-Downloding-Platform/main/homepage.png)
 - Dark gradient theme for premium look  
 - Hover effects signal interactivity  
 - Fast visual scanning using poster cards
